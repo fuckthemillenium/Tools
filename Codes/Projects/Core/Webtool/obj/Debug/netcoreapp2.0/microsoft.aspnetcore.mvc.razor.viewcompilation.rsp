@@ -1,0 +1,16 @@
+D:\Codes\Projects\Core\Webtool
+--output-path=obj\Debug\netcoreapp2.0\
+--application-name=Webtool
+--content-root=D:\Codes\Projects\Core\Webtool
+--file=D:\Codes\Projects\Core\Webtool\Views\AwsInstances\Create.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\AwsInstances\Delete.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\AwsInstances\Details.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\AwsInstances\Edit.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\AwsInstances\Index.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\Core\Index.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\Core\Login.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\Shared\Error.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\Shared\_Layout.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\_ViewImports.cshtml
+--file=D:\Codes\Projects\Core\Webtool\Views\_ViewStart.cshtml

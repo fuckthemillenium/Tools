@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="NSPOS Ops Webtool">
+  <meta name="author" content="Khanh.V.Tran@oracle.com">
+  <!-- Bootstrap core CSS-->
+  <link href="~/sbadmin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="~/sbadmin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="~/sbadmin/css/sb-admin.css" rel="stylesheet">
+
+  <link href="~/webtool/webtool.css" rel="stylesheet">
+
+    <title>NSPOS Webtool - @ViewData["Title"]</title>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <a class="navbar-brand" href="@Url.Action("Index", "Core")"> <font color="#ff0000">NSPOS</font> Webtool</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+            <a class="nav-link" href="@Url.Action("Index", "Core")">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseCloneTool" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-sitemap"></i>
+            <span class="nav-link-text">Clone Tool</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseCloneTool">
+            <li>
+              <a href="#">View Clones</a>
+            </li>
+            <li>
+              <a href="#">Create Clone</a>
+            </li>
+            <li>
+              <a href="#">Stop/Restart Clone</a>
+            </li>
+          </ul>
+        </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+              <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseStatus" data-parent="#exampleAccordion">
+                  <i class="fa fa-fw fa-link"></i>
+                  <span class="nav-link-text">Status</span>
+              </a>
+              <ul class="sidenav-second-level collapse" id="collapseStatus">
+                  <li>
+                      <a href="http://status.aws.amazon.com" target="_blank">Aws Status</a>
+                  </li>
+                  <li>
+                      <a href="https://status.netsuite.com" target="_blank">NetSuite Status</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#logout">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            @Html.ActionLink("Core","Index")
+        </li>
+        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+      </ol>
+      <div class="row">
+        <div class="col-12">
+         @RenderBody()
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>ORACLE + NETSUITE</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logout" tabindex="-1" role="dialog" aria-labelledby="logoutLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="logoutLabel">"Logout" will end your current session</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">All submited jobs will continue to run in the background.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="@Url.Action("Login", "Core")">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/sbadmin/vendor/jquery/jquery.min.js"></script>
+    <script src="~/sbadmin/vendor/popper/popper.min.js"></script>
+    <script src="~/sbadmin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="~/sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="~/sbadmin/js/sb-admin.min.js"></script>
+  </div>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
